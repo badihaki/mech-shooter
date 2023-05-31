@@ -7,7 +7,8 @@ using System;
 
 public class HuntMissionManager : MonoBehaviour
 {
-    private GameObject gm;
+
+    private GM gm;
 
     [Header("Hold the score, show the score goal")]
     [SerializeField] private int score;
@@ -16,13 +17,27 @@ public class HuntMissionManager : MonoBehaviour
     public int scoreMin = 35;
     public int scoreMax = 100;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        scoreGoal = UnityEngine.Random.Range(25, 75);
+    // public HuntMissionManager(int desiredScore, GM gameMaster)
+    // {
+    //     scoreGoal = desiredScore;
+    //     gm = gameMaster;
+    //     gm.StateMachine.ChangeState(gm.GameplayState);
+    // }
 
-        gm = GameObject.Find("Game Master");
+    public void Initialize(int desiredScore, GM gameMaster)
+    {
+        scoreGoal = desiredScore;
+        gm = gameMaster;
+        gm.StateMachine.ChangeState(gm.GameplayState);
     }
+
+    // Start is called before the first frame update
+    // void Start()
+    // {
+    //     scoreGoal = UnityEngine.Random.Range(25, 75);
+    // 
+    //     gm = GameObject.Find("Game Master").GetComponent<GM>();
+    // }
 
     // Update is called once per frame
     void Update()

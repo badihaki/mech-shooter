@@ -26,6 +26,10 @@ MonoBehaviour:
   secondMision: 0
   missionTwoHasBoss: 0
   bossPool: []
+  minimumScore: 0
+  maximumScore: 0
+  minimumSurviveTime: 0
+  maximumSurviveTime: 0
   missionTitle: Mountains 02
   openingImage: {fileID: 0}
   missionInfo: We figured if we fought hard enough, there was a chance to beat 'em

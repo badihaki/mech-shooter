@@ -18,12 +18,18 @@ MonoBehaviour:
   pilotUnlock: {fileID: 11400000, guid: 10b170c684843c04da08d4fe9e440d4d, type: 2}
   unlockableMecha: 0
   mechaUnlock: {fileID: 0}
+  unlockableWeapon: 0
+  weaponUnlock: {fileID: 0}
   initialMission: 0
   missionOneHasBoss: 0
   minibossPool: []
   secondMision: 0
   missionTwoHasBoss: 0
   bossPool: []
+  minimumScore: 0
+  maximumScore: 0
+  minimumSurviveTime: 0
+  maximumSurviveTime: 0
   missionTitle: Mountains 01
   openingImage: {fileID: 0}
   missionInfo: They were monsters. Or were they gods? Either way, we were dinner.

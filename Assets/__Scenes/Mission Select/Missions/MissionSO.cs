@@ -19,8 +19,6 @@ public class MissionSO : ScriptableObject
     {
         elimination,
         survival,
-        chase,
-        escort,
     }
     
     [Header("Mission Types")]
@@ -35,8 +33,6 @@ public class MissionSO : ScriptableObject
         nada,
         elimination,
         survival,
-        chase,
-        escort,
         boss,
     }
     public SecondMisionType secondMision;
@@ -44,6 +40,14 @@ public class MissionSO : ScriptableObject
     public GameObject[] bossPool;
     // ^^^ All of this for Mission 2
     // If Mission 2 has a boss, fuckit, throw a boss in there
+
+    [Header("For Elimination Missions")]
+    public int minimumScore;
+    public int maximumScore;
+
+    [Header("For Survival Missions")]
+    public float minimumSurviveTime;
+    public float maximumSurviveTime;
 
     [Header("UI Stuff")]
     public string missionTitle;

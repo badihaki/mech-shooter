@@ -24,6 +24,9 @@ public class EnemyActor : MonoBehaviour
     [SerializeField] private Slider healthbar;
     [SerializeField] private Vector3 healthBarOffset;
 
+    [Header("Managers")]
+    [SerializeField]private HuntMissionManager huntMissionManager;
+
     // Start is called before the first frame update
     void Start()
     {

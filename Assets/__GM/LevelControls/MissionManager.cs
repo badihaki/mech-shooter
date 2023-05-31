@@ -25,6 +25,7 @@ public class MissionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mobileControls = GameObject.Find("Mobile Controls");
         GM = GameObject.Find("Game Master").GetComponent<GM>();
         GM.InitializePlayerCharacter();
         SetUI();
@@ -46,17 +47,9 @@ public class MissionManager : MonoBehaviour
         {
             eliminationScore.SetActive(true);
             HuntMissionManager secondaryManager = gameObject.AddComponent(typeof(HuntMissionManager)) as HuntMissionManager;
-            // set parameters
+            secondaryManager.Initialize(UnityEngine.Random.Range(currentMission.minimumScore, currentMission.maximumScore), GM);
         }
         else if (currentMission.initialMission == MissionSO.FirstMissionType.survival)
-        {
-            // set parameters
-        }
-        else if (currentMission.initialMission == MissionSO.FirstMissionType.chase)
-        {
-            // set parameters
-        }
-        else if (currentMission.initialMission == MissionSO.FirstMissionType.escort)
         {
             // set parameters
         }
